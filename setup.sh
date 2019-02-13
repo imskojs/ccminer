@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo apt purge -y nvidia*
 wget http://us.download.nvidia.com/XFree86/Linux-x86_64/410.93/NVIDIA-Linux-x86_64-410.93.run
 wget https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda-repo-ubuntu1604-10-0-local-10.0.130-410.48_1.0-1_amd64
@@ -12,3 +13,5 @@ sudo apt-get install -y cuda
 
 cd ccminer/
 sudo ./build.sh
+cd ~
+echo "\nfunction mine () {\n~/ccminer/ccminer -a lyra2v3 --quiet --no-color -o stratum+tcp://coinotron.com:3340 -u imskojs.$1 -p x\n}" >> ~/.bashrc
