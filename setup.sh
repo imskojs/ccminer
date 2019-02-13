@@ -14,4 +14,6 @@ sudo apt-get install -y cuda
 cd ccminer/
 sudo ./build.sh
 cd ~
-echo "\nfunction mine () {\n~/ccminer/ccminer -a lyra2v3 --quiet --no-color -o stratum+tcp://coinotron.com:3340 -u imskojs.$1 -p x\n}" >> ~/.bashrc
+echo "function mine () { 
+  ~/ccminer/ccminer -a lyra2v3 --quiet --no-color -o stratum+tcp://coinotron.com:3340 -u imskojs.$1 -p x
+}" >> ~/.bashrc
